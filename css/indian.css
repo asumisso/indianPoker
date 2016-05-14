@@ -1,22 +1,11 @@
 
-.me{
+.card{
   border: thin solid black;
   border-radius: 5px;
   width: 126px;
   height: 178px;
-  position: relative;
-
+  position: relative
 }
-
-.you{
-  border: thin solid black;
-  border-radius: 5px;
-  width: 126px;
-  height: 178px;
-  position: relative;
-
-}
-
 .topnum{
   position: absolute;
   top: 5px;
@@ -41,4 +30,9 @@
   transform: rotate(180deg);
   bottom: 5px;
   right: 10px;
+}
+.battle{
+  margin-top: 100px;
+
+
 }
