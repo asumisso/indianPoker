@@ -1,9 +1,7 @@
 var deck = [];
 var suit = ["HEART", "DIA", "CLUB", "SPADE"];
 
-deckPush(); //デッキをプッシュ
-
-
+deckPush(deck); //デッキをプッシュ
 
 var me = [];
 var you = [];

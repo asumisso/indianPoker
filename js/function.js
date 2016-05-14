@@ -1,4 +1,4 @@
-function deckPush(deck) {
+function deckPush(array) {
     // >>>>>>> 5f6707572bd7547a8d1c9cc7c6d71acc0ca55625
 
     for (var i = 0; i < suit.length; i++) {
@@ -8,7 +8,7 @@ function deckPush(deck) {
                 suit: suit[i],
                 num: j
             }
-            deck.push(object);
+            array.push(object);
         }
     }
 
@@ -25,6 +25,18 @@ function shuffle(array) {
     for (var i = 0; i < 15; i++) {
         var rand = Math.floor(Math.random() * array.length);
         console.log(array[rand]); //デバッグ
+
+        var topnum = document.createElement("span");
+        node.setAttribute('class','topnum');
+
+        var topsuit = document.createElement("span");
+        node.setAttribute('class','topsuit');
+
+        var btmsuit = document.createElement("span");
+        node.setAttribute('class','btmsuit');
+
+        var btmnum = document.createElement("span");
+        node.setAttribute('class','btmnum');
 
     }
 }
@@ -47,9 +59,4 @@ function draw(me, you) {
     } else {
         document.write("おかしい");
     }
-
-
-
-
-
-    console.log("aaaaa");
+}
