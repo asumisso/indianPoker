@@ -30,4 +30,19 @@
       document.write("引き分け");
     }
   }
-  //a
+
+
+  function shuffle(deck) {
+  var n = deck.length, t, i;
+
+  while (n) {
+    i = Math.floor(Math.random() * n--);
+    t = deck[n];
+    deck[n] = deck[i];
+    deck[i] = t;
+  }
+
+  return deck;
+}
+
+console.log(deck);
