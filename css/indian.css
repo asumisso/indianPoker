@@ -1,0 +1,44 @@
+
+.me{
+  border: thin solid black;
+  border-radius: 5px;
+  width: 126px;
+  height: 178px;
+  position: relative;
+
+}
+
+.you{
+  border: thin solid black;
+  border-radius: 5px;
+  width: 126px;
+  height: 178px;
+  position: relative;
+
+}
+
+.topnum{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.topsuit{
+  position: absolute;
+  top:20px;
+  left: 10px;
+}
+
+.btmsuit{
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: 20px;
+  right: 10px;
+}
+
+.btmnum{
+  position: absolute;
+  transform: rotate(180deg);
+  bottom: 5px;
+  right: 10px;
+}
