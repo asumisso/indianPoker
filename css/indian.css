@@ -1,14 +1,5 @@
 
-.me{
-  border: thin solid black;
-  border-radius: 5px;
-  width: 126px;
-  height: 178px;
-  position: relative;
-
-}
-
-.you{
+.card{
   border: thin solid black;
   border-radius: 5px;
   width: 126px;
