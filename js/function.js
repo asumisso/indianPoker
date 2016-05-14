@@ -30,3 +30,4 @@
       document.write("引き分け");
     }
   }
+  //a
