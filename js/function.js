@@ -22,7 +22,7 @@
   you = deck[rand];
   deck.splice(rand,1);
   
-  if(me.num > you.num){
+  if(me.num > you.num){//change
       document.write("あなたの勝利です！");
     }else if (me.num < you.num) {
       document.write("あなたの負けです…");
