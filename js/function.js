@@ -1,21 +1,30 @@
-  function deckPush(){
+  function deckPush() {
 
-  for (var i = 0; i < suit.length; i++) {
-    for (var j = 0; j < 13; j++) {
+      for (var i = 0; i < suit.length; i++) {
+          for (var j = 0; j < 13; j++) {
 
-      var object = {
-        suit: suit[i],
-        num: j
+              var object = {
+                  suit: suit[i],
+                  num: j
+              }
+              deck.push(object);
+          }
       }
-      deck.push(object);
-    }
+
   }
 
-}
+  function draw(name) {
 
-  function draw(name){
+      var rand = Math.floor(Math.random() * deck.length);
+      name.push(deck[rand]);
+      deck.splice(rand, 1);
+  }
 
-  var rand = Math.floor( Math.random() * deck.length);    
-  name.push(deck[rand]);
-  deck.splice(rand,1);
+
+  function shuffle(array) {
+      for (var i = 0; i < 15; i++) {
+          var rand = Math.floor(Math.random() * array.length);
+          console.log(array[rand]); //デバッグ
+
+      }
   }
