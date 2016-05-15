@@ -24,9 +24,8 @@ function gameStart() {
     clearInterval(shuffleStart);
 
     //デバッグ用
-    console.log(me);
-    console.log(you);
+    console.log(me[0]);
+    console.log(you[0]);
 
     battle(me, you);
-
 }
