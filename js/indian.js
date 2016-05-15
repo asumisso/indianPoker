@@ -23,10 +23,5 @@ function gameStart() {
     //シャッフル止める
     clearInterval(shuffleStart);
 
-    //デバッグ用
-    console.log(me);
-    console.log(you);
-
     battle(me, you);
-
 }

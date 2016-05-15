@@ -88,6 +88,16 @@ function draw(name) {
     deck.splice(rand, 1);
 }
 
+//はやと変更
+function myname(){
+  var str = document.m1.m2.value;
+  return str;
+}
+
+function yourname(){
+  var str = document.y1.y2.value;
+  return str;
+}
 
 function battle(me, you) {
 
@@ -96,9 +106,10 @@ function battle(me, you) {
     draw(you);
 
     if (me[0].num > you[0].num) {
-        gameResult.innerHTML = "あなたの勝利です！";
+      //はやと変更
+        gameResult.innerHTML = myname() + "の勝利です！";
     } else if (me[0].num < you[0].num) {
-        gameResult.innerHTML = "あなたの負けです…";
+        gameResult.innerHTML = yourname() + "の勝利です…";
     } else if (me[0].num == you[0].num) {
         gameResult.innerHTML = "引き分け";
     } else {
