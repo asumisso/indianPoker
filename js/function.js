@@ -4,83 +4,20 @@ function shuffle() {
     var meRand = deck[Math.floor(Math.random() * deck.length)];
     var youRand = deck[Math.floor(Math.random() * deck.length)];
 
-    //赤に書き換え
-    changeSuitRed(meRand);
-    changeSuitRed(youRand);
-
     //HMTL書き換え
-    meTopnum.innerHTML = meRand.num;
+    meTopnum.innerHTML = meRand.visual;
     meTopsuit.innerHTML = meRand.suit;
     meBtmsuit.innerHTML = meRand.suit;
-    meBtmnum.innerHTML = meRand.num;
+    meBtmnum.innerHTML = meRand.visual;
 
-    youTopnum.innerHTML = youRand.num;
+    youTopnum.innerHTML = youRand.visual;
     youTopsuit.innerHTML = youRand.suit;
     youBtmsuit.innerHTML = youRand.suit;
-    youBtmnum.innerHTML = youRand.num;
+    youBtmnum.innerHTML = youRand.visual;
 
     return;
 
 }
-
-//色を変える動作,JQK
-function changeSuitRed(person) {
-    if (person.num == 13) {
-        person.num = "K";
-    } else if (person.num == 12) {
-        person.num = "Q";
-    } else if (person.num == 11) {
-        person.num = "J";
-    }
-
-    if (person.suit == "♥" || person.suit == "♦") {
-        person.num = "<span class='red'>" + person.num + "</span>";
-        person.suit = "<span class='red'>" + person.suit + "</span>";
-    }
-}
-
-
-function resetSuitRed() {
-
-    //♥リセット
-    for (var i = 0; i < 13; i++) {
-        var object = {
-            suit:"♥",
-            num:i+1
-        }
-        deck.splice(i,1,object);
-    }
-
-    //♦リセット
-    for (var i = 13; i < 26; i++) {
-        var object = {
-            suit:"♦",
-            num:i+1-13
-        }
-        deck.splice(i,1,object);
-    }
-
-    //♣リセット
-    for(var i = 36;i<39;i++){
-        var object = {
-            suit:"♣",
-            num:i+1-26
-        }
-        deck.splice(i,1,object);
-    }
-
-    //♠リセット
-    for (var i = 49; i <52; i++) {
-        var object ={
-            suit:"♠",
-            num:i+1-39
-        }
-        deck.splice(i,1,object);
-    }
-
-    return;
-}
-
 
 function draw(name) {
     var rand = Math.floor(Math.random() * deck.length);
@@ -101,7 +38,6 @@ function yourname(){
 
 function battle(me, you) {
 
-    resetSuitRed();
     draw(me);
     draw(you);
 
@@ -116,15 +52,15 @@ function battle(me, you) {
         gameResult.innerHTML = "おかしい";
     }
 
-    meTopnum.innerHTML = me[0].num;
+    meTopnum.innerHTML = me[0].visual;
     meTopsuit.innerHTML = me[0].suit;
     meBtmsuit.innerHTML = me[0].suit;
-    meBtmnum.innerHTML = me[0].num;
+    meBtmnum.innerHTML = me[0].visual;
 
-    youTopnum.innerHTML = you[0].num;
+    youTopnum.innerHTML = you[0].visual;
     youTopsuit.innerHTML = you[0].suit;
     youBtmsuit.innerHTML = you[0].suit;
-    youBtmnum.innerHTML = you[0].num;
+    youBtmnum.innerHTML = you[0].visual;
 
     //デバッグ用
     console.log(me[0].num);
