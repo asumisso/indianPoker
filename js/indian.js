@@ -41,7 +41,7 @@ for (var i = 0; i < deck.length; i++) {
 
 //100msごとにshuffle()を行っている
 //varで定義することによってgameStartのときにclearIntervalできる
-var shuffleStart = setInterval("shuffle()", 500);
+var shuffleStart = setInterval("shuffle()", 100);
 
 //onclickで呼び出される。メイン
 function gameStart() {
