@@ -38,6 +38,7 @@ function yourname(){
 
 function battle(me, you) {
 
+    Initalization();
     draw(me);
     draw(you);
 
@@ -63,8 +64,8 @@ function battle(me, you) {
     youBtmnum.innerHTML = you[0].visual;
 
     //デバッグ用
-    console.log(me[0].num);
-    console.log(you[0].num);
+    console.log(me[0]);
+    console.log(you[0]);
 
 }
 
